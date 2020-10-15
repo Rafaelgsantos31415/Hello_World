@@ -28,8 +28,6 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  int counter = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,11 +46,9 @@ class HomePageState extends State<HomePage> {
               showDialog(
                   context: context,
                   builder: (BuildContext context) {
-                    // retorna um objeto do tipo Dialog
                     return AlertDialog(
                       content: Text("Hello World"),
                       actions: <Widget>[
-                        // define os botões na base do dialogo
                         new FlatButton(
                           child: new Text("Fechar"),
                           onPressed: () {
