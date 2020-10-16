@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(AppWidget(
-    title: 'Hello world',
-  ));
+  runApp(AppWidget());
 }
 
 class AppWidget extends StatelessWidget {
-  final String title;
-
-  const AppWidget({Key key, this.title}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -40,8 +34,12 @@ class HomePageState extends State<HomePage> {
                 Text('Grupo: Pablo Danilo, Rafael Goncalves, Raphael Marinho')),
       ),
       floatingActionButton: Center(
-        child: FloatingActionButton(
-            child: Text('clica'),
+        child: FlatButton(
+            color: Colors.blueGrey,
+            child: Icon(
+              Icons.play_arrow,
+              color: Colors.white60,
+            ),
             onPressed: () {
               showDialog(
                   context: context,
